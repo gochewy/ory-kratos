@@ -1,1 +1,1 @@
-# ory-kratos
+# Ory Kratos Chewy Component

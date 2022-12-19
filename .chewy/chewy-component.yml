@@ -1,0 +1,7 @@
+repository: https://github.com/gochewy/ory-kratos.git
+name: ory-kratos
+type: service
+version: 0.1.1
+dependencies:
+  - repository: https://github.com/gochewy/postgres.git
+    role: database
