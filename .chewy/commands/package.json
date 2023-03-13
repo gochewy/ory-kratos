@@ -17,11 +17,20 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "@gochewy/lib": "^0.1.1-beta.22",
     "@oclif/core": "^1.23.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.12",
     "@pulumi/pulumi": "^3.57.1"
+=======
+    "@gochewy/lib": "^0.1.1-beta.30",
+    "@oclif/core": "^1.23.0",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.1.12",
+    "@pulumi/pulumi": "^3.57.1",
+    "husky": "^8.0.3"
+>>>>>>> de45602b3aa838101565530867bbe5f538e5c2d9
   },
   "devDependencies": {
     "@oclif/test": "^2.2.20",
