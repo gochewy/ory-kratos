@@ -1,4 +1,0 @@
-name: component-deployment
-runtime: nodejs
-backend:
-  url: 'file:///tmp/component-depmloyment'
