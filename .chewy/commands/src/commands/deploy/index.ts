@@ -29,16 +29,15 @@ export default class DeployIndex extends Command {
     const projectConfigDir = chewy.files.getProjectConfigDir()
     const chewyProjectName = chewy.project.getProjectConfig().name
     const componentDefinition = chewy.components.getInstalledComponentDefinition()
-    const pulumiProjectName = `${chewyProjectName}-${componentDefinition.type}-${componentDefinition.name}`
 
     execSync(`pulumi login file://${projectConfigDir}`)
 
     const stack = await LocalWorkspace.createOrSelectStack({
-      stackName: constants.CHEWY_DEV_ENV_NAME,
+      stackName: `${constants.CHEWY_DEV_ENV_NAME}-${componentDefinition.name}`,
       workDir: deploymentDir,
     }, {
       projectSettings: {
-        name: pulumiProjectName,
+        name: chewyProjectName,
         runtime: 'nodejs',
         backend: {
           url: `file://${projectConfigDir}`,
@@ -48,6 +47,6 @@ export default class DeployIndex extends Command {
 
     const upResult = await stack.up()
 
-    chewy.utils.log.info(`${upResult.outputs}`)
+    chewy.utils.log.info(`${JSON.stringify(upResult.outputs)}`)
   }
 }
